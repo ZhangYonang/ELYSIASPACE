@@ -1,0 +1,28 @@
+server:
+  tomcat:
+    uri-encoding: utf-8
+  port: 8001
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/elysiaspace?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: zya20010922
+  cloud:
+    nacos:
+      config:
+        server-addr=127:0:0:1:8848:
+  application:
+    name: cloudServer-8001
+
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
